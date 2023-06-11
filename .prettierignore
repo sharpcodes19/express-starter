@@ -1,0 +1,11 @@
+node_module
+dist
+
+.gitignore
+
+schema.prisma
+nodemon.json
+tsconfig.json
+package.json
+
+yarn.lock
