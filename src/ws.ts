@@ -1,12 +1,12 @@
 import { Server } from 'socket.io'
 import http from 'http'
-import { ServerSocket } from '@/types/socket'
-import env from '@/types/env'
+import { ServerSocket } from '@/schemas/socket'
+import env from '@/schemas/env'
 
 const ws = (server: http.Server) => {
 	const io: ServerSocket = new Server(server, {
 		cors: {
-			origin: env.CORS_ORIGIN
+			origin: process.env.CORS_ORIGIN
 		}
 	})
 

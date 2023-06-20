@@ -1,4 +1,4 @@
-import { WithWs } from '@/types/socket'
+import { WithWs } from '@/schemas/socket'
 import { Router } from 'express'
 
 const routes = ({ io }: WithWs) => {
