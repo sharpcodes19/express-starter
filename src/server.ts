@@ -3,7 +3,6 @@ import http from 'http'
 import cors from 'cors'
 import ws from '@/ws'
 import routes from '@/routes'
-import env from '@/schemas/env'
 
 const app = express()
 app.use(express.json())
