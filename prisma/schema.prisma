@@ -10,9 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model KioskMachine {
-  string String @id @default(cuid())
-  modelName String?
-  serialId String? @unique
-  branchAddress String?
+enum Role {
+  player
+}
+
+model Account {
+  id Int @id @default(autoincrement())
+  role Role @default(player)
+  username String
+  password String
+  dateCreated DateTime @default(now())
+  dateUpdated DateTime?
 }

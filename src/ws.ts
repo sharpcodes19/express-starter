@@ -1,7 +1,6 @@
-import { Server } from 'socket.io'
 import http from 'http'
+import { Server } from 'socket.io'
 import { ServerSocket } from '@/schemas/socket'
-import env from '@/schemas/env'
 
 const ws = (server: http.Server) => {
 	const io: ServerSocket = new Server(server, {

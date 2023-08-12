@@ -10,4 +10,4 @@ export type ServerToClientEvents = z.infer<typeof serverToClientEvents>
 export type ServerSocket = Server<ClientToServerEvents, ServerToClientEvents>
 export type ClientSocket = Socket<ServerToClientEvents, ClientToServerEvents>
 
-export type WithWs = { io: ServerSocket }
+export type WithWs = { io: ServerSocket; socket?: ClientSocket }
